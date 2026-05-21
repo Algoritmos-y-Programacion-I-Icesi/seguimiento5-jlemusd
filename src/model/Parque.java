@@ -85,7 +85,11 @@ public class Parque {
      */
     public double calcularIngresoTotalDiario() {
         //Completar para cumplir con el requerimiento
-        return 0;
+        double total = 0;
+        for (Atraccion a : atracciones){
+            total += a.calcularIngresoDiario();
+        }
+        return total;
     }
 
     /**
@@ -93,18 +97,40 @@ public class Parque {
      */
     public void mostrarIngresosDiarios() {
         //Completar para cumplir con el requerimiento
+        for (Atraccion a : atracciones){
+            System.out.println(a.getNombre())
+            a.calcularIngresoDiario
+        }
     }
 
     /**
      */
     public void generarReporteOperaciones() {
         //Completar para cumplir con el requerimiento
+         for (Atraccon a : atracciones){
+            System.out.println(a.toString());
+        }
     }
 
     public void mostrarAtraccionesClasifRiesgo(){
         //Completar para cumplir con el requerimiento
+        for (Atraccion a : atracciones) {
+            if (a instanceof ClasificableRiesgo) {
+            ClasificableRiesgo c = (ClasificableRiesgo) a;
+            System.out.println(a.getNombre() + c.getNivelRiesgo());
+        }
+    }
     }
     public void generarReporteAlertasCapacidad(){
         //Completar para cumplir con el requerimiento
+        for (Atraccion : a atracciones){
+            if(a.getVisitantesPorDia() > a.getCapacidadMaxima()){
+                int excedente = a.getVisitantePorDia() - a.getCapacidadMaxima();
+                double porcentaje = (excedente * 100.0) / a.getCapacidadMaxima();
+            System.out.println("ALERTA: " + a.getNombre() + " | Excedente: " + excedente + " personas" + " | Sobreocupación: " + String.format("%.1f", porcentaje) + "%")
+            
+
+            }
+        }
     }
 }
