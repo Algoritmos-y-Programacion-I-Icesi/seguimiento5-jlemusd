@@ -127,7 +127,7 @@ public class Parque {
             if(a.getVisitantesPorDia() > a.getCapacidadMaxima()){
                 int excedente = a.getVisitantePorDia() - a.getCapacidadMaxima();
                 double porcentaje = (excedente * 100.0) / a.getCapacidadMaxima();
-            System.out.println("ALERTA: " + a.getNombre() + " | Excedente: " + excedente + " personas" + " | Sobreocupación: " + String.format("%.1f", porcentaje) + "%")
+            System.out.println("ALERTA: " + a.getNombre() + "  Excedente: " + excedente + " personas" + " Sobreocupación: " + String.format("%.1f", porcentaje) + "%")
             
 
             }
